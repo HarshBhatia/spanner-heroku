@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 #app configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = os.enivron['DATABASE_URL']
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 
 #db and auth initialization
 db = SQLAlchemy(app)
