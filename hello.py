@@ -13,3 +13,4 @@ def hello():
 @app.route('/new')
 def new():
 	return "Success"
+

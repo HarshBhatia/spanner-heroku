@@ -4,7 +4,7 @@ from sqlalchemy.types import PickleType
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://hbhatia1:sheldon1@mysql.server/hbhatia1$default'
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ['DATABASE_URL']
 db = SQLAlchemy(app)
 
 class User(db.Model):
