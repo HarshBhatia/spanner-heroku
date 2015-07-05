@@ -10,3 +10,6 @@ app = Flask(__name__)
 def hello():
     return render_template('index.html')
 
+@app.route('/new')
+def new():
+	return "Success"

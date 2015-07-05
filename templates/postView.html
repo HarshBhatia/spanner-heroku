@@ -1,0 +1,24 @@
+{% extends "postViewBase.html" %}
+
+{% block meta_fb_info %}
+  <meta property="og:url" content="http://hbhatia1.pythonanywhere.com/postViewBeta/{{post.id}}"/>
+  <meta property="og:image" content="{{post.CDNLink}}" />
+  <meta property="og:title" content="{{post.title}}" />
+  <meta property="og:description" content="{{user.userName}} uploaded a span on Spanshots™.Click this link to check it out now!" />
+{% endblock %}
+
+{% block post_main %}
+<div align="center" width="600px">
+  <h1><b>{{post.title}}</b></h1>
+
+  <img src = "{{post.CDNLink}}">
+  <p>Posted by:<a href = "../../userViewBeta/{{user.userName}}">{{user.userName}}</a></p>
+</div>
+
+<!--Facebook Comments Plugin-->
+<div align ="center" width = "600px">
+
+  <div class="fb-comments"  data-href="http://hbhatia1.pythonanywhere.com/postViewBeta/{{post.id}}" data-numposts="5"></div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your spanshot</title>
+  <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
+
+<!--Facebook Meta Info-->
+  {% block meta_fb_info %}{% endblock%}
+<!-- End Facebook Meta Info-->
+
+</head>
+<body>
+<!--***************************Load Facebook SDK**********************************-->
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.3&appId=889737381059287";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+<!--***************************End Load Facebook SDK**********************************-->
+
+<!--***************************Top Bar**********************************-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Spanshots!</a>
+      </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Trending <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">Hot </a></li>
+        </ul>
+      </li>
+    </ul>
+      <!--form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form!-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--*************************** End Top Bar**********************************-->
+
+
+{% block post_main%}
+{%endblock%}
+
+
+</body>
+</html>

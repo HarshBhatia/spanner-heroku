@@ -1,0 +1,15 @@
+{% extends "postViewBase.html" %}
+
+{% block post_main %}
+{% for post in postList %}
+
+
+    <div align = "center">
+        <h1>{{post.title}}</h1>
+        <a href = "../../postViewBeta/{{post.id}}"><img src = {{post.CDNLink}} ></a>
+
+    </div>
+
+
+{% endfor %}
+{% endblock %}
