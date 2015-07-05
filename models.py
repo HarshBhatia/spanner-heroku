@@ -1,6 +1,7 @@
 from flask import Flask
 from flask.ext.sqlalchemy import SQLAlchemy
 from sqlalchemy.types import PickleType
+import os
 
 
 app = Flask(__name__)

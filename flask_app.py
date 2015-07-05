@@ -2,7 +2,7 @@ from flask import Flask,request,abort,render_template,jsonify,make_response
 from flask.ext.sqlalchemy import SQLAlchemy
 from models import User,Post
 from flask.ext.httpauth import HTTPBasicAuth
-
+import os
 
 app = Flask(__name__)
 
